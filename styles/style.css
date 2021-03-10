@@ -1,8 +1,10 @@
 :root{
     --clr-primary--900: #4b4b4d;
-    --clr-primary--600: #97989a;
-    --clr-primary--400: #858688;
-    --clr-primary--200: #d2d3d5;
+    --clr-primary--900: #f0f8ff;
+    --clr-primary--600: #5f9ea0;
+    --clr-primary--400: #6495ed;
+    --clr-primary--200: #f08080;
+    --clr-primary--100: #ff8c00;
     font-size: 62.5%;
 
 }
@@ -18,6 +20,12 @@ html, body {
 
 body, h1, h2, h3, p{
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 1px 1px black;
+}
+a{
+    text-decoration: none;
+    color: var(--clr-primary--900);
 }
 
 .container {
@@ -32,7 +40,7 @@ body, h1, h2, h3, p{
         margin: 1rem 0;
         padding: 1rem 1rem 1rem 3rem;
         display: flex;
-        background: var(--clr-primary--900);
+        background: url(../images/textura-header.jpg);
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-between;
@@ -40,10 +48,12 @@ body, h1, h2, h3, p{
     }
         .logo {
             display: flex;
-            background: #d2d3d5;
             width: 10rem;
-            height: 3rem;
         }
+            .logo-header {
+                display: block;
+                width: 100%;
+            }
         .social {
             display: flex;
             align-items: center;
@@ -52,7 +62,8 @@ body, h1, h2, h3, p{
         .social a{
             margin: 1rem;
             padding: 1rem;
-            background: var(--clr-primary--200);
+            color: #5f9ea0;
+            text-shadow: none;
         }
     .nav-menu{
         height: 3%;
@@ -62,14 +73,14 @@ body, h1, h2, h3, p{
         grid-gap:0.1rem;
     }
         .menu{
-            background: var(--clr-primary--400);
             height: auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #6495ed;
         }
-        .menu a{
-            
+        .menu a:hover{
+            color: var(--clr-primary--100)
         }
     .section-menu {
         height: 100%;
@@ -80,12 +91,12 @@ body, h1, h2, h3, p{
             flex: 1 1 auto;
             margin: 1rem 0;
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 1fr;
             grid-gap: 1rem;
             align-content: center;
         }
-            .section {
+            .section ul{
                 height: auto;
                 margin: 0;
                 background: var(--clr-primary--600);
@@ -93,6 +104,28 @@ body, h1, h2, h3, p{
                 justify-content: center;
                 align-items: center;
             }
+                .destacado li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }              
+                .section h3 {
+                    color: var(--clr-primary--900);
+                }
+                .section-uno{
+                    background: url(../images/img-seccion-uno.jpg) no-repeat center center/cover;
+                }
+                .section-dos{
+                    background: url(../images/img-seccion-dos.jpg) no-repeat center center/cover;
+                }
+                .section-tres{
+                    background: url(../images/img-seccion-tres.jpg) no-repeat center center/cover;
+                }
+                .button {
+                    color: var(--clr-primary--400);
+                    background: #f1efda;
+                }
         .article-menu {
             flex: 3 1 auto;
             display: grid;
